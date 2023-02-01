@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_25dp"
+        android:layout_marginVertical="@dimen/margin_8dp"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin_8dp"
+        app:cardElevation="@dimen/margin_2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/originalUrl_textView"
+                style="@style/poppinsWhite500"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingStart="@dimen/margin_20dp"
+                android:paddingTop="@dimen/margin_20dp"
+                android:paddingEnd="@dimen/margin_2dp"
+                android:paddingBottom="@dimen/margin_20dp"
+                android:textColor="@color/grayish_violet"
+                android:textSize="@dimen/font_size"
+                app:layout_constraintEnd_toStartOf="@+id/delete_imageView"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="https://www.spiegel.de/siesntoeaa" />
+
+            <ImageView
+                android:id="@+id/delete_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2dp"
+                android:padding="@dimen/margin_20dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/originalUrl_textView" />
+
+            <View
+                android:id="@+id/view_separator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_2dp"
+                android:background="@color/light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/originalUrl_textView" />
+
+            <TextView
+                android:id="@+id/shortenUrl_textView"
+                style="@style/poppinsWhite500"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingHorizontal="@dimen/margin_20dp"
+                android:paddingTop="@dimen/margin_20dp"
+                android:paddingBottom="@dimen/margin_20dp"
+                android:textColor="@color/cyan_2ac"
+                android:textSize="@dimen/font_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_separator"
+                tools:text="https://rel.ink/k4|Kyk" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/copy_button"
+                style="@style/poppinsWhite700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_20dp"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:background="@drawable/bg_button"
+                android:text="@string/copy_label"
+                android:textAllCaps="true"
+                android:textSize="@dimen/font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shortenUrl_textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

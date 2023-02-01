@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstScreenFragment">
+
+    <fragment
+        android:id="@+id/FirstScreenFragment"
+        android:name="com.example.shortlyapphijfqp.view.fragments.FirstScreenFragment"
+        tools:layout="@layout/fragment_first_screen">
+
+        <action
+            android:id="@+id/action_FirstScreenFragment_to_ShortenUrlsFragment"
+            app:destination="@id/ShortenUrlsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ShortenUrlsFragment"
+        android:name="com.example.shortlyapphijfqp.view.fragments.ShortenUrlsFragment"
+        tools:layout="@layout/fragment_shorten_urls">
+        <action
+            android:id="@+id/action_ShortenUrlsFragment_to_FirstScreenFragment"
+            app:destination="@id/FirstScreenFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="urlParam"
+            app:argType="string" />
+    </fragment>
+</navigation>
